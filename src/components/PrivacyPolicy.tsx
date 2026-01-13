@@ -6,7 +6,7 @@ export default function PrivacyPolicy() {
         <div className="p-8">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-2">Privacy Policy</h1>
-            <p className="text-gray-600">Last updated: January 8, 2025</p>
+            <p className="text-gray-600">Last updated: January , 2026</p>
           </div>
 
           <div className="prose max-w-none">
@@ -75,7 +75,7 @@ export default function PrivacyPolicy() {
                 If you have any questions about this Privacy Policy, please contact us:
               </p>
               <ul className="list-disc pl-6 text-gray-600 space-y-2 mb-4">
-                <li>By email: servicesquare@email.com</li>
+                <li>By email: servicesquare09@gmail.com</li>
                 <li>By phone: +91 7842595947</li>
                 <li>By mail: Secunderabad, Hyderabad, Telangana, India</li>
               </ul>

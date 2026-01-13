@@ -1,24 +1,7 @@
-import { useState } from 'react';
 import { Phone, Mail, MessageCircle, Clock } from 'lucide-react';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    service: '',
-    message: '',
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert('Thank you for your inquiry! We will contact you shortly.');
-    setFormData({ name: '', phone: '', email: '', service: '', message: '' });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  // Form will be submitted natively to FormSubmit
 
   return (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
@@ -104,13 +87,14 @@ export default function Contact() {
                           href="mailto:servicesquare@email.com" 
                           className="block text-gray-600 hover:text-blue-600 transition-colors text-base break-all"
                         >
-                          servicesquare@email.com
+                          Servicesquare09@gmail.com
                         </a>
                         <a 
-                          href="mailto:Shaikazeez@servicesquare.com" 
+                          href="mailto:customerservicesquare09@gmail.com" 
                           className="block text-gray-600 hover:text-blue-600 transition-colors text-base break-all"
                         >
-                          shaikazeez@servicesquare.com
+                         customerservicesquare09@gmail.com
+
                         </a>
                       </div>
                     </div>
@@ -138,7 +122,15 @@ export default function Contact() {
           </div>
 
           <div>
-            <form onSubmit={handleSubmit} className="bg-gray-50 rounded-2xl p-8 shadow-lg border border-gray-100">
+            <form 
+              action="https://formsubmit.co/customerservicesquare09@gmail.com" 
+              method="POST"
+              className="space-y-6"
+            >
+              <input type="hidden" name="_subject" value="New ServiceSquare Form Submission" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_next" value={window.location.href} />
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Request a Service</h3>
 
               <div className="space-y-4">
@@ -150,8 +142,6 @@ export default function Contact() {
                     type="text"
                     id="name"
                     name="name"
-                    value={formData.name}
-                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
                     placeholder="Enter your name"
@@ -166,8 +156,6 @@ export default function Contact() {
                     type="tel"
                     id="phone"
                     name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
                     placeholder="Enter your phone number"
@@ -182,8 +170,6 @@ export default function Contact() {
                     type="email"
                     id="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleChange}
                     className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
                     placeholder="Enter your email"
                   />
@@ -196,8 +182,6 @@ export default function Contact() {
                   <select
                     id="service"
                     name="service"
-                    value={formData.service}
-                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
                   >
@@ -218,8 +202,6 @@ export default function Contact() {
                   <textarea
                     id="message"
                     name="message"
-                    value={formData.message}
-                    onChange={handleChange}
                     rows={4}
                     className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 transition-colors resize-none"
                     placeholder="Describe your issue..."

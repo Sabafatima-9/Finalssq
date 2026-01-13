@@ -1,34 +1,42 @@
 import { useState } from 'react';
 
 export default function Hero() {
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    service: '',
-  });
   const [showModal, setShowModal] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleQuoteSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert('Thank you for your inquiry! We will contact you shortly.');
-    setFormData({ name: '', phone: '', service: '' });
-    setShowModal(false);
+    const form = e.currentTarget;
+    setIsSubmitting(true);
+    
+    try {
+      await fetch('https://formsubmit.co/customerservicesquare09@gmail.com', {
+        method: 'POST',
+        body: new FormData(form),
+      });
+      form.reset();
+      setShowModal(false);
+      alert('Thank you for your inquiry! We will contact you shortly.');
+    } catch (error) {
+      console.error('Form submission failed:', error);
+      alert('There was an error. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <section id="home" className="relative pt-20 pb-4 px-4 sm:px-6 lg:px-8">
-      <div className="absolute inset-0 z-0">
-        <img 
-          src="/images/backg.jpg" 
-          alt="" 
-          className="w-full h-full object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-blue-700/20"></div>
-      </div>
+    <section id="home" className="relative">
+      <div className="relative z-0">
+        <div className="absolute inset-0">
+          <img 
+            src="/images/backg.jpg" 
+            alt="" 
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-blue-700/20"></div>
+        </div>
+        <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center max-w-4xl mx-auto">
           <div className="inline-flex items-center space-x-2 bg-white/90 text-black px-4 py-2 rounded-full text-sm font-medium mb-6 backdrop-blur-sm shadow-md">
@@ -44,17 +52,28 @@ export default function Hero() {
           <p className="text-lg sm:text-xl text-gray-800 font-semibold mb-12 max-w-2xl mx-auto">
             Trusted experts for home & commercial appliances. Fast, reliable, and professional service at your doorstep.
           </p>
+          {/* CTA Button */}
+          <div className={`relative mb-8 text-center transition-all duration-300 ${showModal ? 'z-0' : 'z-10'}`}>
+            <button
+              onClick={() => setShowModal(true)}
+              className="w-full max-w-md bg-gradient-to-r from-blue-600 to-blue-800 text-white font-semibold py-4 px-6 rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 text-sm sm:text-base md:text-lg whitespace-normal mx-auto block"
+            >
+              Book Service Now & Get up to ₹500 Instant Discount on Repair & Service
+            </button>
+          </div>
+
+          {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
             <a
               href="https://wa.me/917842595947?text=Could%20you%20kindly%20provide%20more%20details%20about%20the%20services%20you%20offer%3F"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-500 text-white py-3 px-8 rounded-lg font-semibold hover:bg-green-600 transition-colors shadow-lg hover:shadow-xl"
+              className="bg-green-500 text-white py-3 px-8 rounded-lg font-semibold hover:bg-green-600 transition-colors shadow-lg hover:shadow-xl w-full sm:w-auto text-center"
             >
               WhatsApp Us
             </a>
             <button
-              className="bg-blue-600 text-white py-3 px-8 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+              className="bg-blue-600 text-white py-3 px-8 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl w-full sm:w-auto"
               onClick={() => setShowModal(true)}
             >
               Get a Quote
@@ -74,7 +93,14 @@ export default function Hero() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Get a Quote</h3>
                 <p className="text-gray-600 mb-6">Request a free estimate for your repair</p>
 
-                <form onSubmit={handleQuoteSubmit} className="space-y-4">
+                <form 
+                  id="get-quote-form"
+                  onSubmit={handleSubmit}
+                  className="space-y-4"
+                >
+                  <input type="hidden" name="_subject" value="New ServiceSquare Form Submission" />
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_template" value="table" />
                   <div>
                     <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
                       Your Name
@@ -83,8 +109,6 @@ export default function Hero() {
                       type="text"
                       id="name"
                       name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
                       placeholder="Enter your name"
@@ -99,8 +123,6 @@ export default function Hero() {
                       type="tel"
                       id="phone"
                       name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
                       placeholder="Enter your phone number"
@@ -114,8 +136,6 @@ export default function Hero() {
                     <select
                       id="service"
                       name="service"
-                      value={formData.service}
-                      onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
                     >
@@ -131,9 +151,10 @@ export default function Hero() {
 
                   <button
                     type="submit"
-                    className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+                    disabled={isSubmitting}
+                    className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl disabled:opacity-70 disabled:cursor-not-allowed"
                   >
-                    Request Free Quote
+                    {isSubmitting ? 'Sending...' : 'Request Free Quote'}
                   </button>
                 </form>
               </div>
@@ -143,6 +164,8 @@ export default function Hero() {
           {/* Statistics section removed as requested */}
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
   );
 }
