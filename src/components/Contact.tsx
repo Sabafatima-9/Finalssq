@@ -123,7 +123,7 @@ export default function Contact() {
 
           <div>
             <form 
-              action="https://formsubmit.co/customerservicesquare09@gmail.com" 
+              action="https://formsubmit.co/205187cd4a80c620be27b2846011cccd" 
               method="POST"
               className="space-y-6"
             >

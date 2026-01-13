@@ -10,7 +10,7 @@ export default function Hero() {
     setIsSubmitting(true);
     
     try {
-      await fetch('https://formsubmit.co/customerservicesquare09@gmail.com', {
+      await fetch('https://formsubmit.co/205187cd4a80c620be27b2846011cccd', {
         method: 'POST',
         body: new FormData(form),
       });
