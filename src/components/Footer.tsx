@@ -86,19 +86,34 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-4">Contact Info</h4>
             <ul className="space-y-3">
-              <li className="flex items-start space-x-3">
-                <MessageCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
-                <div>
-                  <a href="https://wa.me/917842595947?text=Could%20you%20kindly%20provide%20more%20details%20about%20the%20services%20you%20offer%3F" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-sm block">
-                    WhatsApp: +91 7842595947
-                  </a>
+              <li className="space-y-2">
+                <div className="flex items-start space-x-3">
+                  <MessageCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-gray-400 text-sm mb-1">WhatsApp Us:</p>
+                    <div className="space-y-1">
+                      <a href="https://wa.me/917842595942?text=Hello!%20I%20need%20help%20with%20appliance%20repair%20services." target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-colors text-sm block">
+                       +91 7842595942
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </li>
-              <li className="flex items-start space-x-3">
-                <Phone className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
-                <a href="tel:+917842595947" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Call: +91 7842595947
-                </a>
+              <li className="space-y-2">
+                <div className="flex items-start space-x-3">
+                  <Phone className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-gray-400 text-sm mb-1">Call Us:</p>
+                    <div className="space-y-1">
+                      <a href="tel:+917842595942" className="text-gray-400 hover:text-blue-400 transition-colors text-sm block">
+                       +91 7842595942
+                      </a>
+                       <a href="tel:+917842595943" className="text-gray-400 hover:text-blue-400 transition-colors text-sm block">
+                       +91 7842595943
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </li>
               <li className="flex items-start space-x-3">
                 <Mail className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
@@ -143,11 +158,13 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-          <p className="text-gray-400 mt-2 text-center">
-            Owner: Shaik Azeez | Contact: 
-            <a href="tel:7842595947" className="text-white hover:underline">7842595947  (MD Noorullah) ||  </a>
-            <a href="tel:7842595945" className="text-white hover:underline">  7842595945  (Shaik Azeez)</a>
-          </p>
+          <div className="text-gray-400 mt-2 text-center space-y-1">
+            <p className="flex items-center justify-center gap-2">
+              <span><a href="tel:917842595942" className="text-white hover:underline">+91 7842595942</a> </span>
+              <span className="text-gray-600">|</span>
+              <span><a href="tel:917842595943" className="text-white hover:underline">+91 7842595943</a> </span>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

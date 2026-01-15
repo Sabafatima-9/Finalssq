@@ -1,7 +1,6 @@
 import { Phone, Mail, MessageCircle, Clock } from 'lucide-react';
 
 export default function Contact() {
-  // Form will be submitted natively to FormSubmit
 
   return (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
@@ -19,16 +18,17 @@ export default function Contact() {
           <div>
             <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-8 text-white mb-8 shadow-xl">
               <h3 className="text-2xl font-bold mb-6">Emergency Service Available 24/7</h3>
-              <p className="mb-6 opacity-90">
+              <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
                 We're here to help you anytime, day or night. Message us on WhatsApp for immediate assistance.
               </p>
               <a
-                href="https://wa.me/917842595947?text=Could%20you%20kindly%20provide%20more%20details%20about%20the%20services%20you%20offer%3F"
+                href="https://wa.me/917842595942?text=Hello!%20I%20need%20help%20with%20appliance%20repair%20services."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-white text-blue-600 px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors"
+                className="inline-flex w-full max-w-xs justify-center items-center bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 mx-auto"
               >
-                WhatsApp: +91 7842595947
+                <MessageCircle className="w-5 h-5 mr-2" />
+                WhatsApp Us
               </a>
             </div>
 
@@ -42,14 +42,22 @@ export default function Contact() {
                     <div className="bg-blue-100 p-2.5 rounded-full flex-shrink-0">
                       <Phone className="w-5 h-5 text-blue-600" />
                     </div>
-                    <div>
+                    <div className="space-y-2">
                       <h4 className="font-semibold text-gray-800">Call Us</h4>
-                      <a 
-                        href="tel:+917842595947" 
-                        className="text-gray-600 hover:text-blue-600 transition-colors text-base"
-                      >
-                        +91 7842595947
-                      </a>
+                      <div className="space-y-1">
+                        <a 
+                          href="tel:+917842595942" 
+                          className="block text-gray-600 hover:text-blue-600 transition-colors text-base"
+                        >
+                         +91 7842595942
+                        </a>
+                        <a 
+                          href="tel:+917842595943" 
+                          className="block text-gray-600 hover:text-blue-600 transition-colors text-base"
+                        >
+                         +91 7842595943
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -60,16 +68,18 @@ export default function Contact() {
                     <div className="bg-green-100 p-2.5 rounded-full flex-shrink-0">
                       <MessageCircle className="w-5 h-5 text-green-600" />
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-800 mb-1">WhatsApp Us</h4>
-                      <a 
-                        href="https://wa.me/917842595947?text=Could%20you%20kindly%20provide%20more%20details%20about%20the%20services%20you%20offer%3F" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-gray-600 hover:text-green-600 transition-colors text-base"
-                      >
-                        +91 7842595947
-                      </a>
+                    <div className="space-y-2">
+                      <h4 className="font-semibold text-gray-800">WhatsApp Us</h4>
+                      <div className="space-y-1">
+                        <a 
+                          href="https://wa.me/917842595942?text=Hello!%20I%20need%20help%20with%20appliance%20repair%20services." 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="block text-gray-600 hover:text-green-600 transition-colors text-base"
+                        >
+                         +91 7842595942
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -84,7 +94,7 @@ export default function Contact() {
                       <h4 className="font-semibold text-gray-800 mb-1">Email Us</h4>
                       <div className="space-y-2">
                         <a 
-                          href="mailto:servicesquare@email.com" 
+                          href="mailto:s servicesquare09@gmail.com" 
                           className="block text-gray-600 hover:text-blue-600 transition-colors text-base break-all"
                         >
                           Servicesquare09@gmail.com

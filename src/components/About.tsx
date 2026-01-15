@@ -66,17 +66,27 @@ export default function About() {
         </div>
 
         <div className="mt-16 bg-white rounded-2xl p-8 md:p-12 shadow-xl border border-gray-100">
-          <div className="max-w-3xl mx-auto text-center">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              About Service Square
-            </h3>
-            <p className="text-gray-600 leading-relaxed mb-6">
-             ServiceSquare is a trusted name in appliance repair services in Narsingi and surrounding areas. With over 15 years of experience in the industry, we have built a reputation for quality service, honest pricing, and customer satisfaction.
-            </p>
-            <p className="text-gray-600 leading-relaxed">
-             Our team of certified technicians is equipped to handle all types of appliance repairs with precision and care.
-            We understand how important your appliances are to your daily life, which is why we offer prompt and reliable service to get them back in working order as quickly as possible.
-            </p>
+          <div className="max-w-5xl mx-auto">
+            <div className="md:flex items-center gap-12">
+              <div className="md:w-1/2 mb-8 md:mb-0">
+                <img 
+                  src="/images/business.png.png" 
+                  alt="Service Square Team" 
+                  className="w-full h-auto rounded-lg shadow-md"
+                />
+              </div>
+              <div className="md:w-1/2">
+                <h3 className="text-3xl md:text-4xl font-bold text-black-600 mb-6 font-serif italic">
+                  About Service Square
+                </h3>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  ServiceSquare is a trusted name in appliance repair services in Narsingi and surrounding areas. With over 15 years of experience in the industry, we have built a reputation for quality service, honest pricing, and customer satisfaction.
+                </p>
+                <p className="text-gray-600 leading-relaxed">
+                  Our team of certified technicians is equipped to handle all types of appliance repairs with precision and care. We understand how important your appliances are to your daily life, which is why we offer prompt and reliable service to get them back in working order as quickly as possible.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

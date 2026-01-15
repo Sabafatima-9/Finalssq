@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { MessageCircle,  } from 'lucide-react';
 
 export default function Hero() {
   const [showModal, setShowModal] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -63,18 +65,19 @@ export default function Hero() {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 w-full max-w-2xl mx-auto">
             <a
-              href="https://wa.me/917842595947?text=Could%20you%20kindly%20provide%20more%20details%20about%20the%20services%20you%20offer%3F"
+              href="https://wa.me/917842595942?text=Hello!%20I%20need%20help%20with%20appliance%20repair%20services."
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-500 text-white py-3 px-8 rounded-lg font-semibold hover:bg-green-600 transition-colors shadow-lg hover:shadow-xl w-full sm:w-auto text-center"
+              className="flex justify-center items-center bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 shadow-lg hover:shadow-xl hover:scale-[1.02]"
             >
+              <MessageCircle className="w-5 h-5 mr-2" />
               WhatsApp Us
             </a>
             <button
-              className="bg-blue-600 text-white py-3 px-8 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl w-full sm:w-auto"
               onClick={() => setShowModal(true)}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             >
               Get a Quote
             </button>

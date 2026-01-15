@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Phone, Menu, X } from 'lucide-react';
+import { Phone, Menu, X, MessageCircle } from 'lucide-react';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -61,13 +61,35 @@ export default function Header() {
             <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
               Contact
             </button>
-            <a
-              href="tel:+917842595947"
-              className="bg-blue-600 text-white px-6 py-2.5 rounded-full hover:bg-blue-700 transition-colors flex items-center space-x-2 font-medium shadow-lg hover:shadow-xl"
-            >
-              <Phone className="w-4 h-4" />
-              <span>Call for Service</span>
-            </a>
+            <div className="relative group">
+              <button className="bg-blue-600 text-white px-6 py-2.5 rounded-full hover:bg-blue-700 transition-colors flex items-center space-x-2 font-medium shadow-lg hover:shadow-xl">
+                <Phone className="w-4 h-4" />
+                <span>Call Now</span>
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <a
+                  href="tel:+917842595942"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                >
+                  <span className="flex items-center">
+                    <Phone className="w-4 h-4 mr-2 text-blue-500" />
+                    +91 7842595942 (General)
+                  </span>
+                </a>
+                <a
+                  href="tel:+917842595943"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors border-t border-gray-100"
+                >
+                  <span className="flex items-center">
+                    <Phone className="w-4 h-4 mr-2 text-blue-500" />
+                    +91 7842595943 (Repair)
+                  </span>
+                </a>
+              </div>
+            </div>
           </nav>
 
           <button
@@ -98,13 +120,30 @@ export default function Header() {
               Contact
             </button>
             <a
-              href="https://wa.me/917842595947?text=Could%20you%20kindly%20provide%20more%20details%20about%20the%20services%20you%20offer%3F"
+              href="https://wa.me/917842595942?text=Hello!%20I%20need%20help%20with%20appliance%20repair%20services."
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors text-center font-medium"
+              className="block w-full bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition-colors text-center font-medium flex items-center justify-center space-x-2"
             >
-              Call Now
+              <MessageCircle className="w-4 h-4" />
+              <span>WhatsApp Us</span>
             </a>
+            <div className="space-y-2 w-full">
+              <a
+                href="tel:+917842595942"
+                className="block w-full bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors text-center font-medium flex items-center justify-center space-x-2"
+              >
+                <Phone className="w-4 h-4" />
+                <span>General: +91 7842595942</span>
+              </a>
+              <a
+                href="tel:+917842595943"
+                className="block w-full bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition-colors text-center font-medium flex items-center justify-center space-x-2"
+              >
+                <Phone className="w-4 h-4" />
+                <span>Repair: +91 7842595943</span>
+              </a>
+            </div>
           </nav>
         </div>
       )}
