@@ -60,7 +60,7 @@ export default function ServiceAreas() {
   const [selectedService, setSelectedService] = useState('');
 
   const handleAreaCall = () => {
-    window.location.href = 'tel:+917842595947';
+    window.location.href = 'tel:+917842595942';
   };
 
   return (
