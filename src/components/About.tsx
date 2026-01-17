@@ -70,7 +70,7 @@ export default function About() {
             <div className="md:flex items-center gap-12">
               <div className="md:w-1/2 mb-8 md:mb-0">
                 <img 
-                  src="/images/business.png.png" 
+                  src="/images/businesssss.png" 
                   alt="Service Square Team" 
                   className="w-full h-auto rounded-lg shadow-md"
                 />
