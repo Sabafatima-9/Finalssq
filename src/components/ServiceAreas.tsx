@@ -111,7 +111,7 @@ export default function ServiceAreas() {
               >
                 <div className="flex flex-col items-center space-y-2">
                   <a 
-                    href="tel:+917842595947" 
+                    href="tel:+917842595942" 
                     className="w-5 h-5 flex items-center justify-center"
                     onClick={(e) => e.stopPropagation()}
                   >
@@ -128,7 +128,7 @@ export default function ServiceAreas() {
           <div className="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-100">
             <p className="text-center text-gray-700">
               <span className="font-semibold">Don't see your area?</span> We cover many more locations across Hyderabad.
-              <a href="tel:+917842595947" className="text-blue-600 hover:text-blue-700 font-semibold ml-1">
+              <a href="tel:+917842595942" className="text-blue-600 hover:text-blue-700 font-semibold ml-1">
                 Call us to check availability
               </a>
             </p>
