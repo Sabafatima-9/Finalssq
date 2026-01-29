@@ -146,7 +146,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col items-center space-y-2">
             <p className="text-center text-gray-400 text-sm">
-              © 2025 ServiceSquare. All rights reserved. Designed by Saba Fatima.
+              © 2025 ServiceSquare. All rights reserved. Made by Saba Fatima.
             </p>
             <div className="flex space-x-4">
               <Link to="/privacy-policy" className="text-blue-400 hover:text-blue-300 text-sm transition-colors">
