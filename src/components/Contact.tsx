@@ -94,7 +94,7 @@ export default function Contact() {
                       <h4 className="font-semibold text-gray-800 mb-1">Email Us</h4>
                       <div className="space-y-2">
                         <a 
-                          href="mailto:s servicesquare09@gmail.com" 
+                          href="mailto:Servicesquare09@gmail.com" 
                           className="block text-gray-600 hover:text-blue-600 transition-colors text-base break-all"
                         >
                           Servicesquare09@gmail.com
@@ -103,8 +103,7 @@ export default function Contact() {
                           href="mailto:customerservicesquare09@gmail.com" 
                           className="block text-gray-600 hover:text-blue-600 transition-colors text-base break-all"
                         >
-                         customerservicesquare09@gmail.com
-
+                          customerservicesquare09@gmail.com
                         </a>
                       </div>
                     </div>

@@ -56,12 +56,12 @@ export default function Hero() {
           </p>
           {/* CTA Button */}
           <div className={`relative mb-8 text-center transition-all duration-300 ${showModal ? 'z-0' : 'z-10'}`}>
-            <button
-              onClick={() => setShowModal(true)}
-              className="w-full max-w-md bg-gradient-to-r from-blue-600 to-blue-800 text-white font-semibold py-4 px-6 rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 text-sm sm:text-base md:text-lg whitespace-normal mx-auto block"
+            <a
+              href="tel:+917842595942"
+              className="w-full max-w-md bg-gradient-to-r from-blue-600 to-blue-800 text-white font-semibold py-4 px-6 rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 text-sm sm:text-base md:text-lg whitespace-normal mx-auto block text-center"
             >
-              Book Service Now & Get up to ₹500 Instant Discount on Repair & Service
-            </button>
+              Call Now & Get up to ₹500 Instant Discount on Repair & Service
+            </a>
           </div>
 
           {/* Action Buttons */}

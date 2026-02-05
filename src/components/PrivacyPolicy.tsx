@@ -75,9 +75,9 @@ export default function PrivacyPolicy() {
                 If you have any questions about this Privacy Policy, please contact us:
               </p>
               <ul className="list-disc pl-6 text-gray-600 space-y-2 mb-4">
-                <li>By email: servicesquare09@gmail.com</li>
-                <li>By phone: +91 7842595947</li>
-                <li>By mail: Secunderabad, Hyderabad, Telangana, India</li>
+                <li>By email: Servicesquare09@gmail.com</li>
+                <li>By phone: +91 78425 95942</li>
+                <li>By mail: Hyderabad, Telangana, India 500001</li>
               </ul>
             </section>
           </div>

@@ -28,17 +28,17 @@ const services = [
   {
     image: '/images/microwave.png',
     title: 'Microwave / Oven Repair',
-    description: 'Expert repair for microwave ovens, OTGs, and kitchen appliances.',
-  },
-    {
-    image: '/images/acrepair.png',
-    title: 'Dish Washer Repair',
-    description: 'Professional dishwasher repair services for all brands, including water drainage, heating, and spray arm issues..',
+    description: 'Microwave oven and electric oven repair services for all brands.',
   },
   {
-    image: '/images/generalappliancesrepair.png',
+    image: '/images/dishwasher.png',
+    title: 'Dish Washer Repair',
+    description: 'Dishwasher repair and maintenance for all major brands and models.',
+  },
+  {
+    image: '/images/generalappliance.png',
     title: 'General Appliance Repair',
-    description: 'Comprehensive repair services for all types of electrical appliances, with expert troubleshooting and maintenance.',
+    description: 'Complete repair solutions for all types of home appliances.',
   }
 ];
 
@@ -86,7 +86,7 @@ export default function Services() {
                   onClick={scrollToContact}
                   className="mt-auto text-blue-600 font-semibold hover:text-blue-700 transition-colors flex items-center space-x-2 group"
                 >
-                  <span>Book Service</span>
+                  <span>Call Now</span>
                 </button>
               </div>
             </div>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Phone, Menu, X, MessageCircle } from 'lucide-react';
+import { Phone, Menu, X, MessageCircle, ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -46,28 +47,52 @@ export default function Header() {
           </div>
 
           <nav className="hidden md:flex items-center space-x-8">
-            <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+            <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
               Home
-            </button>
-            <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              Services
-            </button>
-            <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              About
-            </button>
-            <button onClick={() => scrollToSection('service-areas')} className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              Service Areas
-            </button>
-            <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              Contact
-            </button>
+            </Link>
             <div className="relative group">
-              <button className="bg-blue-600 text-white px-6 py-2.5 rounded-full hover:bg-blue-700 transition-colors flex items-center space-x-2 font-medium shadow-lg hover:shadow-xl">
+              <button className="text-gray-700 hover:text-blue-600 transition-colors font-medium flex items-center space-x-1">
+                <span>Services</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <Link to="/services/ac-repair" className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  AC Repair
+                </Link>
+                <Link to="/services/refrigerator-repair" className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  Refrigerator Repair
+                </Link>
+                <Link to="/services/washing-machine-repair" className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  Washing Machine Repair
+                </Link>
+                <Link to="/services/microwave-repair" className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  Microwave Repair
+                </Link>
+                <Link to="/services/commercial-fridge-repair" className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  Commercial Fridge Repair
+                </Link>
+                <Link to="/services/deep-freezer-repair" className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  Deep Freezer Repair
+                </Link>
+                <Link to="/services/dishwasher-repair" className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  Dishwasher Repair
+                </Link>
+                <Link to="/services/general-appliance-repair" className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  General Appliance Repair
+                </Link>
+              </div>
+            </div>
+            <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              About
+            </Link>
+            <Link to="/faq" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              FAQ
+            </Link>
+            <div className="relative group">
+              <button className="bg-green-600 text-white px-6 py-2.5 rounded-full hover:bg-green-700 transition-colors flex items-center space-x-2 font-medium shadow-lg hover:shadow-xl">
                 <Phone className="w-4 h-4" />
                 <span>Call Now</span>
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
+                <ChevronDown className="w-4 h-4" />
               </button>
               <div className="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <a
@@ -104,44 +129,59 @@ export default function Header() {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white border-t">
           <nav className="px-4 py-4 space-y-3">
-            <button onClick={() => scrollToSection('home')} className="block w-full text-left py-2 text-gray-700 hover:text-blue-600 font-medium">
+            <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="block w-full text-left py-2 text-gray-700 hover:text-blue-600 font-medium">
               Home
-            </button>
-            <button onClick={() => scrollToSection('services')} className="block w-full text-left py-2 text-gray-700 hover:text-blue-600 font-medium">
-              Services
-            </button>
-            <button onClick={() => scrollToSection('about')} className="block w-full text-left py-2 text-gray-700 hover:text-blue-600 font-medium">
+            </Link>
+            <div className="space-y-2">
+              <div className="text-gray-700 hover:text-blue-600 font-medium">Services</div>
+              <div className="pl-4 space-y-1">
+                <Link to="/services/ac-repair" onClick={() => setIsMobileMenuOpen(false)} className="block w-full text-left py-1 text-sm text-gray-600 hover:text-blue-600">
+                  AC Repair
+                </Link>
+                <Link to="/services/refrigerator-repair" onClick={() => setIsMobileMenuOpen(false)} className="block w-full text-left py-1 text-sm text-gray-600 hover:text-blue-600">
+                  Refrigerator Repair
+                </Link>
+                <Link to="/services/washing-machine-repair" onClick={() => setIsMobileMenuOpen(false)} className="block w-full text-left py-1 text-sm text-gray-600 hover:text-blue-600">
+                  Washing Machine Repair
+                </Link>
+                <Link to="/services/microwave-repair" onClick={() => setIsMobileMenuOpen(false)} className="block w-full text-left py-1 text-sm text-gray-600 hover:text-blue-600">
+                  Microwave Repair
+                </Link>
+                <Link to="/services/commercial-fridge-repair" onClick={() => setIsMobileMenuOpen(false)} className="block w-full text-left py-1 text-sm text-gray-600 hover:text-blue-600">
+                  Commercial Fridge Repair
+                </Link>
+                <Link to="/services/deep-freezer-repair" onClick={() => setIsMobileMenuOpen(false)} className="block w-full text-left py-1 text-sm text-gray-600 hover:text-blue-600">
+                  Deep Freezer Repair
+                </Link>
+                <Link to="/services/dishwasher-repair" onClick={() => setIsMobileMenuOpen(false)} className="block w-full text-left py-1 text-sm text-gray-600 hover:text-blue-600">
+                  Dishwasher Repair
+                </Link>
+                <Link to="/services/general-appliance-repair" onClick={() => setIsMobileMenuOpen(false)} className="block w-full text-left py-1 text-sm text-gray-600 hover:text-blue-600">
+                  General Appliance Repair
+                </Link>
+              </div>
+            </div>
+            <Link to="/about" onClick={() => setIsMobileMenuOpen(false)} className="block w-full text-left py-2 text-gray-700 hover:text-blue-600 font-medium">
               About
-            </button>
-            <button onClick={() => scrollToSection('service-areas')} className="block w-full text-left py-2 text-gray-700 hover:text-blue-600 font-medium">
-              Service Areas
-            </button>
-            <button onClick={() => scrollToSection('contact')} className="block w-full text-left py-2 text-gray-700 hover:text-blue-600 font-medium">
-              Contact
-            </button>
+            </Link>
+            <Link to="/faq" onClick={() => setIsMobileMenuOpen(false)} className="block w-full text-left py-2 text-gray-700 hover:text-blue-600 font-medium">
+              FAQ
+            </Link>
             <a
               href="https://wa.me/917842595942?text=Hello!%20I%20need%20help%20with%20appliance%20repair%20services."
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition-colors text-center font-medium flex items-center justify-center space-x-2"
             >
-              <MessageCircle className="w-4 h-4" />
-              <span>WhatsApp Us</span>
+              <MessageCircle className="w-5 h-5" />
+              <span>WhatsApp</span>
             </a>
-            <div className="space-y-2 w-full">
-              <a
-                href="tel:+917842595942"
-                className="block w-full bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors text-center font-medium flex items-center justify-center space-x-2"
-              >
-                <Phone className="w-4 h-4" />
-                <span>General: +91 7842595942</span>
+            <div className="space-y-2 pt-2 border-t">
+              <a href="tel:+917842595942" className="block w-full text-left py-2 text-gray-700 hover:text-blue-600 font-medium">
+                📞 +91 7842595942 (General)
               </a>
-              <a
-                href="tel:+917842595943"
-                className="block w-full bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition-colors text-center font-medium flex items-center justify-center space-x-2"
-              >
-                <Phone className="w-4 h-4" />
-                <span>Repair: +91 7842595943</span>
+              <a href="tel:+917842595943" className="block w-full text-left py-2 text-gray-700 hover:text-blue-600 font-medium">
+                📞 +91 7842595943 (Repair)
               </a>
             </div>
           </nav>
