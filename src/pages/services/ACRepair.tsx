@@ -10,7 +10,7 @@ const ACRepair: React.FC = () => {
       <Header />
       
       <main className="pt-20">
-        {/* Hero Section */}
+        {/* HERO SECTION */}
         <section className="bg-gradient-to-br from-blue-50 to-blue-100 py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
@@ -19,13 +19,17 @@ const ACRepair: React.FC = () => {
                   <Wind className="w-12 h-12 text-white" />
                 </div>
               </div>
+
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                AC Repair Services
+                AC Repair & Service in Hyderabad
               </h1>
+
               <p className="text-xl text-gray-600 mb-8">
-                Professional air conditioner repair and maintenance services in Hyderabad. 
-                Fast, reliable, and affordable solutions for all AC brands.
+                Professional air conditioner repair and maintenance services in Hyderabad,
+                Gachibowli, Kukatpally, Madhapur, and nearby areas.
+                Same-day service with warranty on repairs.
               </p>
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:+917842595942"
@@ -46,108 +50,120 @@ const ACRepair: React.FC = () => {
           </div>
         </section>
 
-        {/* Services Offered */}
+        {/* SERVICES OFFERED */}
         <section className="py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
               Our AC Repair Services
             </h2>
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-100">
+              <div className="bg-white p-6 rounded-lg shadow-lg border">
                 <Wrench className="w-8 h-8 text-blue-600 mb-4" />
                 <h3 className="text-xl font-semibold mb-2">AC Installation</h3>
-                <p className="text-gray-600">Professional installation of all AC brands with proper wiring and mounting.</p>
+                <p className="text-gray-600">Leak-proof installation for all AC brands.</p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-100">
+
+              <div className="bg-white p-6 rounded-lg shadow-lg border">
                 <Thermometer className="w-8 h-8 text-blue-600 mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Gas Refilling</h3>
-                <p className="text-gray-600">AC gas refilling and leak detection services for optimal cooling.</p>
+                <p className="text-gray-600">Genuine refrigerant with leak detection.</p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-100">
+
+              <div className="bg-white p-6 rounded-lg shadow-lg border">
+                <Wind className="w-8 h-8 text-blue-600 mb-4" />
+                <h3 className="text-xl font-semibold mb-2">Jet Cleaning</h3>
+                <p className="text-gray-600">Deep cleaning for ice-cold air and hygiene.</p>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-lg border">
                 <Clock className="w-8 h-8 text-blue-600 mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Emergency Repair</h3>
-                <p className="text-gray-600">24/7 emergency AC repair services for urgent cooling needs.</p>
+                <p className="text-gray-600">Same-day AC repair across Hyderabad.</p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-100">
+
+              <div className="bg-white p-6 rounded-lg shadow-lg border">
                 <Shield className="w-8 h-8 text-blue-600 mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Annual Maintenance</h3>
-                <p className="text-gray-600">Regular AC servicing and maintenance for long-lasting performance.</p>
+                <p className="text-gray-600">AMC plans for long-lasting performance.</p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-100">
-                <Wind className="w-8 h-8 text-blue-600 mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Compressor Repair</h3>
-                <p className="text-gray-600">Expert compressor repair and replacement services.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-100">
+
+              <div className="bg-white p-6 rounded-lg shadow-lg border">
                 <CheckCircle className="w-8 h-8 text-blue-600 mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Cleaning Services</h3>
-                <p className="text-gray-600">Deep cleaning of AC filters, coils, and drainage systems.</p>
+                <h3 className="text-xl font-semibold mb-2">Compressor Repair</h3>
+                <p className="text-gray-600">Expert compressor repair & replacement.</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Brands We Service */}
+        {/* PRICING SECTION (IMPORTANT FOR ADS) */}
         <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              Brands We Service
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 max-w-4xl mx-auto">
-              {['LG', 'Samsung', 'Daikin', 'Hitachi', 'Blue Star', 'Voltas'].map((brand) => (
-                <div key={brand} className="bg-white p-4 rounded-lg shadow text-center">
-                  <div className="font-semibold text-gray-700">{brand}</div>
-                </div>
-              ))}
+          <div className="container mx-auto px-4 max-w-4xl text-center">
+            <h2 className="text-3xl font-bold mb-6">AC Service Pricing</h2>
+            <p className="text-gray-600 mb-8">Transparent pricing with no hidden charges</p>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="border p-6 rounded-lg bg-white">
+                <h3 className="font-semibold text-lg">Inspection</h3>
+                <p className="text-blue-600 font-bold mt-2">₹299</p>
+              </div>
+              <div className="border p-6 rounded-lg bg-white">
+                <h3 className="font-semibold text-lg">AC Service</h3>
+                <p className="text-blue-600 font-bold mt-2">₹499</p>
+              </div>
+              <div className="border p-6 rounded-lg bg-white">
+                <h3 className="font-semibold text-lg">Repair</h3>
+                <p className="text-blue-600 font-bold mt-2">Starts from ₹699</p>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Why Choose Us */}
+        {/* WHY CHOOSE US */}
         <section className="py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              Why Choose Service Square for AC Repair?
+              Why Choose Service Square?
             </h2>
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              <div className="text-center">
+
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto text-center">
+              <div>
                 <Clock className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-2">24/7 Service</h3>
-                <p className="text-gray-600">Round-the-clock AC repair services for emergencies.</p>
+                <h3 className="text-xl font-semibold mb-2">Same-Day Service</h3>
+                <p className="text-gray-600">Fast response across Hyderabad.</p>
               </div>
-              <div className="text-center">
+              <div>
                 <Shield className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Warranty Assured</h3>
-                <p className="text-gray-600">All repairs come with service warranty for peace of mind.</p>
+                <p className="text-gray-600">Service warranty on all repairs.</p>
               </div>
-              <div className="text-center">
+              <div>
                 <CheckCircle className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Expert Technicians</h3>
-                <p className="text-gray-600">Certified technicians with years of experience.</p>
+                <p className="text-gray-600">Certified & experienced professionals.</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* FINAL CTA */}
         <section className="py-16 bg-blue-600">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
-              Need AC Repair? We're Here to Help!
+              Book AC Repair Service Now
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Get fast and reliable AC repair services in Hyderabad. 
-              Call us now for instant assistance.
+            <p className="text-xl text-blue-100 mb-8">
+              Call now and get same-day AC repair in Hyderabad.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+917842595942"
-                className="inline-flex items-center justify-center px-8 py-3 bg-white text-blue-600 rounded-full hover:bg-gray-100 transition-colors font-semibold"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Call: +91 78425 95942
-              </a>
-            </div>
+
+            <a
+              href="tel:+917842595942"
+              className="inline-flex items-center justify-center px-8 py-3 bg-white text-blue-600 rounded-full hover:bg-gray-100 transition-colors font-semibold"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Call: +91 78425 95942
+            </a>
           </div>
         </section>
       </main>
