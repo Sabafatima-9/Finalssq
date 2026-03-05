@@ -112,10 +112,7 @@ const ACRepair: React.FC = () => {
                 <h3 className="font-semibold text-lg">AC Service</h3>
                 <p className="text-blue-600 font-bold mt-2">₹499</p>
               </div>
-              <div className="border p-6 rounded-lg bg-white">
-                <h3 className="font-semibold text-lg">Repair</h3>
-                <p className="text-blue-600 font-bold mt-2">Starts from ₹699</p>
-              </div>
+      
             </div>
           </div>
         </section>
