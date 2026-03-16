@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { MessageCircle,  } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   const [showModal, setShowModal] = useState(false);
@@ -32,56 +33,151 @@ export default function Hero() {
       <div className="relative z-0">
         <div className="absolute inset-0">
           <img 
-            src="/images/backg.jpg" 
+            src="/images/newbackgroung.png" 
             alt="" 
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-blue-700/20"></div>
         </div>
-        <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center max-w-4xl mx-auto">
-          <div className="inline-flex items-center space-x-2 bg-white/90 text-black px-4 py-2 rounded-full text-sm font-medium mb-6 backdrop-blur-sm shadow-md">
-            <span className="w-2 h-2 bg-black rounded-full animate-pulse"></span>
-            <span className="text-black">Available 24/7 for Emergency Service</span>
-          </div>
+        <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative">
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="grid lg:grid-cols-12 gap-8 items-center">
+              {/* Main Content */}
+              <div className="lg:col-span-8 text-center lg:text-left">
+                <div className="max-w-4xl mx-auto lg:mx-0">
+                  <div className="inline-flex items-center space-x-2 bg-white/90 text-black px-4 py-2 rounded-full text-sm font-medium mb-6 backdrop-blur-sm shadow-md">
+                    <span className="w-2 h-2 bg-black rounded-full animate-pulse"></span>
+                    <span className="text-black">Available 24/7 for Emergency Service</span>
+                  </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black mb-6 leading-tight">
-            24/7 Electronic Appliance
-            <span className="block text-gray-800 mt-2">Repair Services in Hyderabad</span>
-          </h1>
+                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black mb-6 leading-tight">
+                    No. 1 AC Repair & Service in Hyderabad
+                    <span className="block text-gray-800 mt-2">Repair Services in Hyderabad</span>
+                  </h1>
 
-          <p className="text-lg sm:text-xl text-gray-800 font-semibold mb-12 max-w-2xl mx-auto">
-            Trusted experts for home & commercial appliances. Fast, reliable, and professional service at your doorstep.
-          </p>
-          {/* CTA Button */}
-          <div className={`relative mb-8 text-center transition-all duration-300 ${showModal ? 'z-0' : 'z-10'}`}>
-            <a
-              href="tel:+917842595942"
-              className="w-full max-w-md bg-gradient-to-r from-blue-600 to-blue-800 text-white font-semibold py-4 px-6 rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 text-sm sm:text-base md:text-lg whitespace-normal mx-auto block text-center"
-            >
-              Call Now & Get up to ₹500 Instant Discount on Repair & Service
-            </a>
-          </div>
+                  <p className="text-lg sm:text-xl text-gray-800 font-semibold mb-12 max-w-2xl mx-auto lg:mx-0">
+                    Hyderabad’s Leading AC Repair & Maintenance Company
+                  </p>
+                  
+                  {/* CTA Button */}
+                  <div className={`relative mb-8 transition-all duration-300 ${showModal ? 'z-0' : 'z-10'}`}>
+                    <a
+                      href="tel:+917842595942"
+                      className="w-full max-w-md bg-gradient-to-r from-blue-600 to-blue-800 text-white font-semibold py-4 px-6 rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 text-sm sm:text-base md:text-lg whitespace-normal mx-auto lg:mx-0 block text-center"
+                    >
+                      Call Now & Get up to ₹500 Instant Discount on Repair & Service
+                    </a>
+                  </div>
 
-          {/* Action Buttons */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 w-full max-w-2xl mx-auto">
-            <a
-              href="https://wa.me/917842595942?text=Hello!%20I%20need%20help%20with%20appliance%20repair%20services."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex justify-center items-center bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 shadow-lg hover:shadow-xl hover:scale-[1.02]"
-            >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              WhatsApp Us
-            </a>
-            <button
-              onClick={() => setShowModal(true)}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-            >
-              Get a Quote
-            </button>
-          </div>
+                  {/* Action Buttons */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 w-full max-w-2xl mx-auto lg:mx-0">
+                    <a
+                      href="https://wa.me/917842595942?text=Hello!%20I%20need%20help%20with%20appliance%20repair%20services."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex justify-center items-center bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 shadow-lg hover:shadow-xl hover:scale-[1.02]"
+                    >
+                      <MessageCircle className="w-5 h-5 mr-2" />
+                      WhatsApp Us
+                    </a>
+                    <button
+                      onClick={() => setShowModal(true)}
+                      className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                    >
+                      Get a Quote
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Floating Service Buttons - Right Side */}
+              <div className="lg:col-span-4 hidden lg:block">
+                <div className="space-y-4 sticky top-24">
+                  <Link 
+                    to="/services/ac-repair"
+                    className="block bg-gradient-to-r from-gray-800 to-black text-white px-6 py-4 rounded-xl shadow-lg hover:shadow-xl hover:-translate-x-1 transition-all duration-300 cursor-pointer"
+                  >
+                    <h4 className="font-semibold text-lg mb-1">AC Repair</h4>
+                    <p className="text-sm opacity-90">Fast & Reliable Service</p>
+                  </Link>
+                  
+                  <Link 
+                    to="/services/refrigerator-repair"
+                    className="block bg-gradient-to-r from-black to-gray-800 text-white px-6 py-4 rounded-xl shadow-lg hover:shadow-xl hover:-translate-x-1 transition-all duration-300 cursor-pointer"
+                  >
+                    <h4 className="font-semibold text-lg mb-1">Refrigerator</h4>
+                    <p className="text-sm opacity-90">Expert Technicians</p>
+                  </Link>
+                  
+                  <Link 
+                    to="/services/washing-machine-repair"
+                    className="block bg-gradient-to-r from-gray-800 to-black text-white px-6 py-4 rounded-xl shadow-lg hover:shadow-xl hover:-translate-x-1 transition-all duration-300 cursor-pointer"
+                  >
+                    <h4 className="font-semibold text-lg mb-1">Washing Machine</h4>
+                    <p className="text-sm opacity-90">Same Day Service</p>
+                  </Link>
+                  
+                  <Link 
+                    to="/services/microwave-repair"
+                    className="block bg-gradient-to-r from-black to-gray-800 text-white px-6 py-4 rounded-xl shadow-lg hover:shadow-xl hover:-translate-x-1 transition-all duration-300 cursor-pointer"
+                  >
+                    <h4 className="font-semibold text-lg mb-1">Microwave</h4>
+                    <p className="text-sm opacity-90">Quick Repairs</p>
+                  </Link>
+                  
+                  <Link 
+                    to="/services/commercial-fridge-repair"
+                    className="block bg-gradient-to-r from-gray-800 to-black text-white px-6 py-4 rounded-xl shadow-lg hover:shadow-xl hover:-translate-x-1 transition-all duration-300 cursor-pointer"
+                  >
+                    <h4 className="font-semibold text-lg mb-1">Commercial Fridge</h4>
+                    <p className="text-sm opacity-90">Business Solutions</p>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile Service Buttons */}
+            <div className="lg:hidden mt-12 space-y-3">
+              <Link 
+                to="/services/ac-repair"
+                className="block bg-gradient-to-r from-gray-800 to-black text-white px-6 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+              >
+                <h4 className="font-semibold text-lg mb-1">AC Repair</h4>
+                <p className="text-sm opacity-90">Fast & Reliable Service</p>
+              </Link>
+              
+              <Link 
+                to="/services/refrigerator-repair"
+                className="block bg-gradient-to-r from-black to-gray-800 text-white px-6 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+              >
+                <h4 className="font-semibold text-lg mb-1">Refrigerator</h4>
+                <p className="text-sm opacity-90">Expert Technicians</p>
+              </Link>
+              
+              <Link 
+                to="/services/washing-machine-repair"
+                className="block bg-gradient-to-r from-gray-800 to-black text-white px-6 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+              >
+                <h4 className="font-semibold text-lg mb-1">Washing Machine</h4>
+                <p className="text-sm opacity-90">Same Day Service</p>
+              </Link>
+              
+              <Link 
+                to="/services/microwave-repair"
+                className="block bg-gradient-to-r from-black to-gray-800 text-white px-6 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+              >
+                <h4 className="font-semibold text-lg mb-1">Microwave</h4>
+                <p className="text-sm opacity-90">Quick Repairs</p>
+              </Link>
+              
+              <Link 
+                to="/services/commercial-fridge-repair"
+                className="block bg-gradient-to-r from-gray-800 to-black text-white px-6 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+              >
+                <h4 className="font-semibold text-lg mb-1">Commercial Fridge</h4>
+                <p className="text-sm opacity-90">Business Solutions</p>
+              </Link>
+            </div>
 
           {showModal && (
             <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40">
@@ -168,7 +264,6 @@ export default function Hero() {
         </div>
       </div>
     </div>
-  </div>
-</section>
+    </section>
   );
 }
