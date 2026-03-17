@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "installCommand": "npm install",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
   "routes": [
     {
       "src": "/assets/(.*)",
@@ -12,6 +18,10 @@
     },
     {
       "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot|json|xml|txt))",
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*\\.(html|json|xml|txt))",
       "dest": "/$1"
     },
     {
