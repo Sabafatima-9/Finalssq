@@ -117,9 +117,14 @@ export default function Footer() {
               </li>
               <li className="flex items-start space-x-3">
                 <Mail className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
-                <a href="mailto:servicesquare09@gmail.com" className="text-gray-400 hover:text-white transition-colors text-sm">
-                 servicesquare09@gmail.com
-                </a>
+                <div className="space-y-1">
+                  <a href="mailto:servicesquare09@gmail.com" className="text-gray-400 hover:text-white transition-colors text-sm block">
+                     servicesquare09@gmail.com
+                  </a>
+                  <a href="mailto:customerservicesquare09@gmail.com" className="text-gray-400 hover:text-white transition-colors text-sm block">
+                     customerservicesquare09@gmail.com
+                  </a>
+                </div>
               </li>
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />

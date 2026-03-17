@@ -33,6 +33,14 @@ const highlights = [
   },
 ];
 
+const testimonials = [
+  {
+    name: 'Raj Sharma',
+    location: 'Secunderabad',
+    content: 'Very impressed with their prompt response and quality work. Fixed my washing machine perfectly. Highly recommend!'
+  }
+];
+
 export default function About() {
   return (
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-blue-50">
@@ -87,6 +95,27 @@ export default function About() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Testimonials Section */}
+        <div className="mt-16">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">What Our Customers Say</h3>
+            <p className="text-lg text-gray-600">Trusted by thousands of satisfied customers across Hyderabad</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                <blockquote className="text-gray-700 italic mb-4">
+                  "{testimonial.content}"
+                </blockquote>
+                <cite className="text-gray-900 font-semibold not-italic">
+                  - {testimonial.name}, {testimonial.location}
+                </cite>
+              </div>
+            ))}
           </div>
         </div>
       </div>
