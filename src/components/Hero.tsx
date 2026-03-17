@@ -52,23 +52,11 @@ export default function Hero() {
 
                   <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black mb-6 leading-tight">
                     No. 1 AC Repair & Service in Hyderabad
-                    <span className="block text-gray-800 mt-2">Repair Services in Hyderabad</span>
                   </h1>
 
                   <p className="text-lg sm:text-xl text-gray-800 font-semibold mb-12 max-w-2xl mx-auto lg:mx-0">
                     Hyderabad’s Leading AC Repair & Maintenance Company
                   </p>
-                  
-                  {/* CTA Button */}
-                  <div className={`relative mb-8 transition-all duration-300 ${showModal ? 'z-0' : 'z-10'}`}>
-                    <a
-                      href="tel:+917842595942"
-                      className="w-full max-w-md bg-gradient-to-r from-blue-600 to-blue-800 text-white font-semibold py-4 px-6 rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 text-sm sm:text-base md:text-lg whitespace-normal mx-auto lg:mx-0 block text-center"
-                    >
-                      Call Now & Get up to ₹500 Instant Discount on Repair & Service
-                    </a>
-                  </div>
-
                   {/* Action Buttons */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 w-full max-w-2xl mx-auto lg:mx-0">
                     <a
